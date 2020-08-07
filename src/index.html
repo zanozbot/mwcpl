@@ -5,13 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Masters Web Components Pattern Library </title>
 
+
+  <script src="https://kit.fontawesome.com/f0f8de12ff.js" crossorigin="anonymous"></script>
+
   <script type="module" src="/build/mwcpl.esm.js"></script>
   <script nomodule src="/build/mwcpl.js"></script>
 
+  <style>
+    table {
+      text-align: left;
+    }
+    div > mwcpl-button:not(:first-child) {
+      margin-left: 1em;
+    }
+  </style>
 </head>
 <body>
 
-  <mwcpl-button label="First button"></mwcpl-button>
+  <h1>Buttons</h1>
+
+  <h2>Standard</h2>
+  <div>
+    <mwcpl-button label="Standard"></mwcpl-button>
+    <mwcpl-button uppercase label="Uppercase"></mwcpl-button>    
+  </div>
+
+  <h2>Outlined</h2>
+  <div>
+    <mwcpl-button outlined label="Outlined"></mwcpl-button>
+    <mwcpl-button outlined uppercase label="Uppercase"></mwcpl-button>
+  </div>
+
+  <h2>Rounded</h2>
+  <div>
+    <mwcpl-button rounded label="Standard"></mwcpl-button>
+    <mwcpl-button outlined rounded label="Outlined"></mwcpl-button>
+  </div>
+
+  <h2>Leading icon</h2>
+  <div>
+    <mwcpl-button label="Standard">
+      <span slot="leading-icon" class="fas fa-camera"></span>
+    </mwcpl-button>
+    <mwcpl-button rounded label="Standard">
+      <span slot="leading-icon" class="fas fa-camera"></span>
+    </mwcpl-button>
+    <mwcpl-button outlined label="Outlined">
+      <span slot="leading-icon" class="fas fa-camera"></span>
+    </mwcpl-button>
+    <mwcpl-button outlined rounded label="Outlined">
+      <span slot="leading-icon" class="fas fa-camera"></span>
+    </mwcpl-button>
+  </div>
+
+  <h2>Trailing icon</h2>
+  <div>
+    <mwcpl-button label="Standard">
+      <span slot="trailing-icon" class="fas fa-long-arrow-alt-right"></span>
+    </mwcpl-button>
+    <mwcpl-button rounded label="Standard">
+      <span slot="trailing-icon" class="fas fa-long-arrow-alt-right"></span>
+    </mwcpl-button>
+    <mwcpl-button outlined label="Outlined">
+      <span slot="trailing-icon" class="fas fa-long-arrow-alt-right"></span>
+    </mwcpl-button>
+    <mwcpl-button outlined rounded label="Outlined">
+      <span slot="trailing-icon" class="fas fa-long-arrow-alt-right"></span>
+    </mwcpl-button>
+  </div>
+
+  <h2>Fullwidth</h2>
+  <div>
+    <mwcpl-button fullwidth label="Standard"></mwcpl-button>
+  </div>
+
+  <h2>Loading</h2>
+  <div>
+    <mwcpl-button loading label="Standard"></mwcpl-button>
+    <mwcpl-button loading rounded label="Standard"></mwcpl-button>
+    <mwcpl-button loading outlined label="Outlined"></mwcpl-button>
+    <mwcpl-button loading outlined rounded label="Outlined"></mwcpl-button>
+  </div>
+
+  <h2>Disabled</h2>
+  <div>
+    <mwcpl-button disabled label="Standard"></mwcpl-button>
+    <mwcpl-button disabled rounded label="Standard"></mwcpl-button>
+    <mwcpl-button disabled outlined label="Outlined"></mwcpl-button>
+    <mwcpl-button disabled outlined rounded label="Outlined"></mwcpl-button>
+  </div>
+
+  <h2>Variables</h2>
+  <div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default value</th>
+      </tr>
+      <tr>
+        <td>--mwcpl-button-padding</td>
+        <td>size</td>
+        <td>0.75em 1.5em</td>
+      </tr>
+      <tr>
+        <td>--mwcpl-button-border-radius</td>
+        <td>size</td>
+        <td>4px</td>
+      </tr>
+      <tr>
+        <td>--mwcpl-button-background-color</td>
+        <td>color</td>
+        <td>#3f51b5</td>
+      </tr>
+
+      <tr>
+        <td>--mwcpl-button-background-color-hover</td>
+        <td>color</td>
+        <td>#5262bc</td>
+      </tr>
+
+      <tr>
+        <td>--mwcpl-button-background-color-active</td>
+        <td>color</td>
+        <td>#6574c4</td>
+      </tr>
+
+      <tr>
+        <td>--mwcpl-button-background-color-box-shadow</td>
+        <td>color</td>
+        <td>#d9dcf0</td>
+      </tr>
+
+      <tr>
+        <td>--mwcpl-button-background-color-loading</td>
+        <td>color</td>
+        <td>#d9dcf0</td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 </html>

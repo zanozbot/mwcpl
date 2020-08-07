@@ -1,0 +1,106 @@
+:host {
+  display: inline-flex;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 100ms ease;
+  padding: var(--mwcpl-button-padding, 0.75em 1.5em);
+  border-radius: var(--mwcpl-button-border-radius, 4px);
+  background-color: lightgrey;
+}
+
+:host([rounded]) button {
+  border-radius: 290486px;
+}
+
+button:not([disabled]) {
+  background-color: var(--mwcpl-button-background-color, #3f51b5);
+  color: var(--mwcpl-button-color, #ffffff);
+
+  &:hover {
+    background-color: var(--mwcpl-button-background-color-hover, #5262bc);
+  }
+
+  &:active {
+    background-color: var(--mwcpl-button-background-color-active, #6574c4);
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 2px var(--mwcpl-button-background-color-box-shadow, #d9dcf0);
+  }
+}
+
+:host([outlined]) button:not([disabled]) {
+  color: var(--mwcpl-button-background-color, #3f51b5);
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px var(--mwcpl-button-background-color, #3f51b5);
+
+  &:active, &:hover, &:focus {
+    color: white;
+    background-color: var(--mwcpl-button-background-color, #3f51b5);
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 2px var(--mwcpl-button-background-color-box-shadow, #d9dcf0);
+  }
+}
+
+:host([outlined]) button[disabled] {
+  box-shadow: 0 0 0 1px lightgrey;
+  background-color: transparent;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+:host([uppercase]) {
+  button {
+    text-transform: uppercase;
+  }
+}
+
+:host([fullwidth]) {
+  width: 100%;
+  button {
+    flex: 1 1 auto;
+  }
+}
+
+:host([loading]) {
+  button {
+    position: relative;
+    overflow: hidden;
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--mwcpl-button-background-color-loading, #d9dcf0);
+      .line {
+        position: absolute;
+        height: 4px;
+        background-color: var(--mwcpl-button-background-color, #3f51b5);
+        animation: loading 2s infinite;
+        @keyframes loading {
+          from { left: -15%; width: 15%; }
+          to { left: 100%; width: 100%;}
+        }
+      }
+    }
+  }
+}
+
+slot[name=leading-icon]::slotted(*) {
+  margin-right: 0.5em;
+  font-size: 1em;
+}
+
+slot[name=trailing-icon]::slotted(*) {
+  margin-left: 0.5em;
+  font-size: 1em;
+}
