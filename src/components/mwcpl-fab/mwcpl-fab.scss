@@ -1,0 +1,47 @@
+:host {
+  display: inline-flex;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 56px;
+  width: 56px;
+  border-radius: 290486px;
+  background-color: var(--mwcpl-fab-background-color, #3f51b5);
+  color: var(--mwcpl-fab-color, #ffffff);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.35);
+
+  &:hover {
+    background-color: var(--mwcpl-fab-background-color-hover, #5262bc);
+  }
+
+  &:active {
+    background-color: var(--mwcpl-fab-background-color-active, #6574c4);
+  }
+}
+
+slot[name=icon]::slotted(*) {
+  font-size: 20px;
+}
+
+:host([mini]) button {
+  height: 40px;
+  width: 40px;
+  slot[name=icon]::slotted(*) {
+    font-size: 16px;
+  }
+}
+
+:host([label]) button {
+  width: auto;
+  padding: 0 1em;
+  display: inline-flex;
+  align-items: center;
+  span:last-child {
+    margin-left: 1em;
+  }
+}

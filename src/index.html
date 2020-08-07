@@ -12,37 +12,43 @@
   <script nomodule src="/build/mwcpl.js"></script>
 
   <style>
+    * {
+      font-family: Roboto, sans-serif;
+    }
     table {
       text-align: left;
     }
-    div > mwcpl-button:not(:first-child) {
+    table td {
+      padding-right: 2em;
+    }
+    div > *:not(:first-child) {
       margin-left: 1em;
     }
   </style>
 </head>
 <body>
 
-  <h1>Buttons</h1>
+  <h2>Buttons</h2>
 
-  <h2>Standard</h2>
+  <h3>Standard</h3>
   <div>
     <mwcpl-button label="Standard"></mwcpl-button>
     <mwcpl-button uppercase label="Uppercase"></mwcpl-button>    
   </div>
 
-  <h2>Outlined</h2>
+  <h3>Outlined</h3>
   <div>
     <mwcpl-button outlined label="Outlined"></mwcpl-button>
     <mwcpl-button outlined uppercase label="Uppercase"></mwcpl-button>
   </div>
 
-  <h2>Rounded</h2>
+  <h3>Rounded</h3>
   <div>
     <mwcpl-button rounded label="Standard"></mwcpl-button>
     <mwcpl-button outlined rounded label="Outlined"></mwcpl-button>
   </div>
 
-  <h2>Leading icon</h2>
+  <h3>Leading icon</h3>
   <div>
     <mwcpl-button label="Standard">
       <span slot="leading-icon" class="fas fa-camera"></span>
@@ -58,7 +64,7 @@
     </mwcpl-button>
   </div>
 
-  <h2>Trailing icon</h2>
+  <h3>Trailing icon</h3>
   <div>
     <mwcpl-button label="Standard">
       <span slot="trailing-icon" class="fas fa-long-arrow-alt-right"></span>
@@ -74,12 +80,12 @@
     </mwcpl-button>
   </div>
 
-  <h2>Fullwidth</h2>
+  <h3>Fullwidth</h3>
   <div>
     <mwcpl-button fullwidth label="Standard"></mwcpl-button>
   </div>
 
-  <h2>Loading</h2>
+  <h3>Loading</h3>
   <div>
     <mwcpl-button loading label="Standard"></mwcpl-button>
     <mwcpl-button loading rounded label="Standard"></mwcpl-button>
@@ -87,7 +93,7 @@
     <mwcpl-button loading outlined rounded label="Outlined"></mwcpl-button>
   </div>
 
-  <h2>Disabled</h2>
+  <h3>Disabled</h3>
   <div>
     <mwcpl-button disabled label="Standard"></mwcpl-button>
     <mwcpl-button disabled rounded label="Standard"></mwcpl-button>
@@ -95,55 +101,100 @@
     <mwcpl-button disabled outlined rounded label="Outlined"></mwcpl-button>
   </div>
 
-  <h2>Variables</h2>
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-padding</td>
+      <td>size</td>
+      <td>0.75em 1.5em</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-border-radius</td>
+      <td>size</td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-color</td>
+      <td>color</td>
+      <td>#ffffff</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-background-color</td>
+      <td>color</td>
+      <td>#3f51b5</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-background-color-hover</td>
+      <td>color</td>
+      <td>#5262bc</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-background-color-active</td>
+      <td>color</td>
+      <td>#6574c4</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-background-color-box-shadow</td>
+      <td>color</td>
+      <td>#d9dcf0</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-button-background-color-loading</td>
+      <td>color</td>
+      <td>#d9dcf0</td>
+    </tr>
+  </table>
+
+  <h2>Floating action buttons</h2>
+  
+  <h3>Standard</h3>
   <div>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-      <tr>
-        <td>--mwcpl-button-padding</td>
-        <td>size</td>
-        <td>0.75em 1.5em</td>
-      </tr>
-      <tr>
-        <td>--mwcpl-button-border-radius</td>
-        <td>size</td>
-        <td>4px</td>
-      </tr>
-      <tr>
-        <td>--mwcpl-button-background-color</td>
-        <td>color</td>
-        <td>#3f51b5</td>
-      </tr>
-
-      <tr>
-        <td>--mwcpl-button-background-color-hover</td>
-        <td>color</td>
-        <td>#5262bc</td>
-      </tr>
-
-      <tr>
-        <td>--mwcpl-button-background-color-active</td>
-        <td>color</td>
-        <td>#6574c4</td>
-      </tr>
-
-      <tr>
-        <td>--mwcpl-button-background-color-box-shadow</td>
-        <td>color</td>
-        <td>#d9dcf0</td>
-      </tr>
-
-      <tr>
-        <td>--mwcpl-button-background-color-loading</td>
-        <td>color</td>
-        <td>#d9dcf0</td>
-      </tr>
-    </table>
+    <mwcpl-fab>
+      <span slot="icon" class="fas fa-shopping-cart"></span>
+    </mwcpl-fab>
+    <mwcpl-fab label="Add to cart">
+      <span slot="icon" class="fas fa-shopping-cart"></span>
+    </mwcpl-fab>
   </div>
+
+  <h3>Mini</h3>
+  <div>
+    <mwcpl-fab mini>
+      <span slot="icon" class="fas fa-shopping-cart"></span>
+    </mwcpl-fab>
+    <mwcpl-fab mini label="Add to cart">
+      <span slot="icon" class="fas fa-shopping-cart"></span>
+    </mwcpl-fab>
+  </div>
+
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <td>--mwcpl-fab-color</td>
+      <td>color</td>
+      <td>#ffffff</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-fab-background-color</td>
+      <td>color</td>
+      <td>#3f51b5</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-fab-background-color-hover</td>
+      <td>color</td>
+      <td>#5262bc</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-fab-background-color-active</td>
+      <td>color</td>
+      <td>#6574c4</td>
+    </tr>
+  </table>
 
 </body>
 </html>
