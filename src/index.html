@@ -12,6 +12,10 @@
   <script nomodule src="/build/mwcpl.js"></script>
 
   <style>
+    /* Fixed FOUC before hydration */
+    mwcpl-dialog {
+      visibility: hidden;
+    }
     * {
       font-family: Roboto, sans-serif;
     }
@@ -28,7 +32,7 @@
 </head>
 <body>
 
-  <h2>Buttons</h2>
+  <!-- <h2>Buttons</h2>
 
   <h3>Standard</h3>
   <div>
@@ -175,6 +179,11 @@
   <h3>Variables</h3>
   <table>
     <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
       <td>--mwcpl-fab-color</td>
       <td>color</td>
       <td>#ffffff</td>
@@ -193,6 +202,71 @@
       <td>--mwcpl-fab-background-color-active</td>
       <td>color</td>
       <td>#6574c4</td>
+    </tr>
+  </table> -->
+
+  <h2>Dialogs</h2>
+
+  <h3>Simple</h3>
+  <mwcpl-button onclick="document.getElementById('simple-dialog').setAttribute('open', '')" label="Simple"></mwcpl-button>
+  <mwcpl-dialog id="simple-dialog" heading="Simple heading">
+    <p>Some simple explanation</p>
+    <mwcpl-button slot="primary-action" label="Got it!" closeDialog></mwcpl-button>
+  </mwcpl-dialog>
+
+  <h3>With actions</h3>
+  <mwcpl-button onclick="document.getElementById('actions-dialog').setAttribute('open', '')" label="Actions"></mwcpl-button>
+  <mwcpl-dialog id="actions-dialog" heading="Agreement policy">
+    <p>Do you agree with our Terms and Conditions?</p>
+    <mwcpl-button outlined slot="secondary-action" label="I disagree" closeDialog></mwcpl-button>
+    <mwcpl-button slot="primary-action" label="I agree" closeDialog></mwcpl-button>
+  </mwcpl-dialog>
+
+  <h3>Scrollable</h3>
+  <mwcpl-button onclick="document.getElementById('scrollable-dialog').setAttribute('open', '')" label="Scrollable"></mwcpl-button>
+  <mwcpl-dialog id="scrollable-dialog" heading="Scrollable dialog">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente deleniti eligendi accusamus, qui alias ducimus corporis odit eaque impedit inventore molestiae voluptas iste, ipsum sed harum commodi quis autem maiores recusandae quibusdam delectus consequatur? Eveniet totam molestiae nemo eaque odit non laboriosam voluptatum, incidunt ea earum reiciendis rerum qui quaerat at similique, eius delectus numquam in. Illum repudiandae repellat amet? Cumque obcaecati animi deleniti quae. Eos, voluptate tempore! Minima possimus, sed explicabo ipsum mollitia vel rem fugit aperiam! Ex commodi rem maxime nobis eius error sunt eaque alias odio, odit ipsam voluptates dolore minima repellendus at laudantium voluptatum, qui ducimus laboriosam? A id officia magnam, laudantium tenetur libero quisquam voluptas magni. Nostrum ullam, qui blanditiis perferendis provident sequi, laudantium eius nulla vel neque, architecto minus mollitia earum iure hic quos. Alias doloremque unde in quidem reiciendis repellat quisquam non maxime! Natus nobis, ducimus numquam deleniti eaque aut accusantium nemo saepe non, exercitationem sint architecto ab a, hic nesciunt rerum error quaerat! Ad aliquid, eius, a soluta consequuntur mollitia quod dignissimos repudiandae, quae pariatur ipsam possimus! Quam, aliquam dolor animi, voluptas ipsum, repellendus obcaecati minus provident quisquam voluptatum iure id asperiores nisi quae. Perferendis unde molestiae molestias distinctio velit facilis rem nulla officia natus, illo reprehenderit itaque. Nisi, necessitatibus. Perferendis est incidunt doloremque nisi eum? Enim culpa, repellat nisi ad rerum optio. Perspiciatis dolor accusantium beatae eligendi nobis architecto sunt inventore aut et impedit corrupti maxime mollitia quisquam, vitae maiores adipisci, qui labore modi repudiandae autem provident! Reprehenderit hic possimus enim velit quos quo temporibus eaque vel sapiente voluptatibus, ipsam dolorem sint ex dicta adipisci facilis impedit non rem. Recusandae quos aut ipsam ducimus. Architecto, esse iusto laborum laboriosam expedita delectus! Excepturi porro qui magni odit itaque rerum provident at. Eveniet eligendi vero, repellendus corporis, quod quas ratione commodi, repudiandae eum deleniti iusto recusandae quo velit possimus quidem deserunt distinctio. Corrupti facilis enim, unde amet nobis dolore cumque aperiam nihil blanditiis quam reiciendis, ex magni! Excepturi dolorum quasi provident impedit necessitatibus similique? Molestias numquam saepe quaerat dignissimos, voluptatem totam quod corporis cum adipisci sed neque praesentium quasi rerum aut accusamus. Modi nostrum eaque quis voluptatem, doloremque veniam eveniet saepe in architecto odio delectus repellat et odit dolorem maiores tempora nemo cupiditate ipsam velit fugit nobis, error, commodi suscipit fugiat. Sequi asperiores amet blanditiis sint alias explicabo suscipit sit eos dolorum reiciendis assumenda tempora aspernatur, magnam earum laudantium. Tempore excepturi animi at, maiores aliquid soluta, nesciunt similique debitis deleniti cupiditate veniam, illum unde! Consequuntur repellendus reprehenderit porro. Quasi officiis eveniet fuga dicta, laudantium molestiae aperiam fugit ipsum numquam velit amet explicabo, itaque ea eius impedit? Error rerum magnam ex tenetur placeat at? Culpa nemo quisquam esse accusantium ab eaque quibusdam minus eum aperiam. Nostrum, distinctio mollitia repudiandae vel modi earum doloribus esse commodi quis possimus quaerat adipisci quisquam nobis, maiores illo expedita recusandae vitae quasi quod! Vel delectus numquam veniam? Aut distinctio, illum, nisi dolorem beatae similique laboriosam quibusdam odio quis facilis, quos modi inventore voluptatum autem repellendus voluptatem nostrum quam.</p>
+    <mwcpl-button slot="primary-action" label="Close" closeDialog></mwcpl-button>
+  </mwcpl-dialog>
+
+  <h3>Dismissable backdrop</h3>
+  <mwcpl-button onclick="document.getElementById('dismissable-dialog').setAttribute('open', '')" label="Dismissable"></mwcpl-button>
+  <mwcpl-dialog id="dismissable-dialog" heading="Dismissable dialog" dismissable>
+    <p>Click on the backdrop to dismiss the dialog.</p>
+    <mwcpl-button slot="primary-action" label="Not working"></mwcpl-button>
+  </mwcpl-dialog>
+
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
+      <td>--mwcpl-dialog-backdrop-color</td>
+      <td>color</td>
+      <td>rgba(0, 0, 0, .25)</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-dialog-max-width</td>
+      <td>size</td>
+      <td>600px</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-dialog-background-color</td>
+      <td>color</td>
+      <td>#ffffff</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-dialog-color</td>
+      <td>color</td>
+      <td>#000000</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-dialog-border-color</td>
+      <td>color</td>
+      <td>#f5f5f5</td>
     </tr>
   </table>
 

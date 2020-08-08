@@ -38,10 +38,10 @@ slot[name=icon]::slotted(*) {
 
 :host([label]) button {
   width: auto;
-  padding: 0 1em;
+  padding: 0 1rem;
   display: inline-flex;
   align-items: center;
   span:last-child {
-    margin-left: 1em;
+    margin-left: 1rem;
   }
 }
