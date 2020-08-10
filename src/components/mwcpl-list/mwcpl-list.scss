@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+:host(:not([clickable])) {
+  pointer-events: none;
+}
+
+ul {
+  padding: 0;
+  border: 1px solid var(--mwcpl-list-border-color, #d3d3d3);
+  border-radius: var(--mwcpl-border-radius, 4px);
+}
+
+::slotted(li[role="separator"]:not([group])) {
+  list-style-type: none;
+  margin: 0 1rem;
+  border-bottom: 1px solid var(--mwcpl-list-border-color, #d3d3d3);
+}
+
+::slotted(li[role="separator"][group]) {
+  list-style-type: none;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.5rem 1rem;
+  color: var(--mwcpl-list-group-color, #808080);
+}
