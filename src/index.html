@@ -16,9 +16,6 @@
     mwcpl-dialog {
       visibility: hidden;
     }
-    mwcpl-list {
-      max-width: 400px;
-    }
     * {
       font-family: Roboto, sans-serif;
     }
@@ -271,7 +268,7 @@
       <td>color</td>
       <td>#f5f5f5</td>
     </tr>
-  </table> -->
+  </table> 
 
   <h2>List</h2>
 
@@ -387,6 +384,69 @@
     </tr>
     <tr>
       <td>--mwcpl-list-item-trailing-icon-color</td>
+      <td>color</td>
+      <td>#808080</td>
+    </tr>
+  </table> -->
+
+  <h2>Form field</h2>
+
+  <h3>Input</h3>
+  <mwcpl-form-field label="Input">
+    <input slot="input" type="text" placeholder="Input">
+  </mwcpl-form-field>
+
+  <h3>Textarea</h3>
+  <mwcpl-form-field label="Textarea">
+    <textarea slot="input" placeholder="Textarea"></textarea>
+  </mwcpl-form-field>
+
+  <h3>Fullwidth</h3>
+  <mwcpl-form-field label="Input" fullwidth>
+    <input slot="input" type="text" placeholder="Input">
+  </mwcpl-form-field>
+
+  <h3>With icon</h3>
+  <mwcpl-form-field label="Input">
+    <input slot="input" type="text" placeholder="Input">
+    <span slot="icon" class="fas fa-keyboard"></span>
+  </mwcpl-form-field>
+
+  <h3>With hint</h3>
+  <mwcpl-form-field label="Input">
+    <input slot="input" type="text" placeholder="Input">
+    <span slot="hint">Hint</span>
+  </mwcpl-form-field>
+
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
+      <td>--mwcpl-form-field-background-color</td>
+      <td>color</td>
+      <td>#f5f5f5</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-form-field-border-radius</td>
+      <td>size</td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-form-field-color</td>
+      <td>color</td>
+      <td>#000000</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-form-field-color-active</td>
+      <td>color</td>
+      <td>#3f51b5</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-form-field-hint-color</td>
       <td>color</td>
       <td>#808080</td>
     </tr>
