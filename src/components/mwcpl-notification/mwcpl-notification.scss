@@ -1,0 +1,33 @@
+:host {
+  display: none;
+  background-color: var(--mwcpl-notification-background-color, #323232);
+  color: var(--mwcpl-notification-color, #ffffff);
+  padding: 1rem 1.5rem;
+  min-width: var(--mwcpl-notification-min-width, 16rem);
+  border-radius: var(--mwcpl-notification-border-radius, 4px);
+  box-shadow: var(--mwcpl-notification-box-shadow, 0px 2px 4px 0px rgba(0, 0, 0, 0.35));
+}
+
+slot[name="icon"]::slotted(*) {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+slot[name="action"]::slotted(*) {
+  --mwcpl-button-padding: 0.5rem 1rem;
+  --mwcpl-button-background-color: var(--mwcpl-notification-action-background-color, transparent);
+  --mwcpl-button-background-color-hover: var(--mwcpl-notification-action-background-hover, rgba(255, 255, 255, .2));
+  --mwcpl-button-background-color-active: var(--mwcpl-notification-action-background-hover, rgba(255, 255, 255, .3));
+  --mwcpl-button-background-color-box-shadow: none;
+  --mwcpl-button-color: var(--mwcpl-notification-color, #ffffff);;
+}
+
+span {
+  flex: 1 1 auto;
+  word-wrap: anywhere;
+}
+
+:host([show]) {
+  display: inline-flex;
+  align-items: center;
+}

@@ -43,7 +43,7 @@
 </head>
 <body>
 
-  <h2>Buttons</h2>
+  <!-- <h2>Buttons</h2>
 
   <h3>Standard</h3>
   <div>
@@ -581,7 +581,71 @@
       <td>size</td>
       <td>0 -1px 0 #d3d3d3</td>
     </tr>
-  </table>
+  </table> 
+
+  <h2>Notifications</h2>
+
+  <h3>Standard</h3>
+  <mwcpl-notification label="Notification"></mwcpl-notification>
+
+  <h3>With icon</h3>
+  <mwcpl-notification label="Notification">
+    <span slot="icon" class="fas fa-bell"></span>
+  </mwcpl-notification>
+
+  <h3>With action</h3>
+  <mwcpl-notification label="Notification">
+    <mwcpl-button closeNotification slot="action" label="Action"></mwcpl-button>
+  </mwcpl-notification>
+
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-background-color</td>
+      <td>color</td>
+      <td>#323232</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-color</td>
+      <td>color</td>
+      <td>#ffffff</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-min-width</td>
+      <td>size</td>
+      <td>16rem</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-border-radius</td>
+      <td>size</td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-box-shadow</td>
+      <td>size</td>
+      <td>0px 2px 4px 0px rgba(0, 0, 0, 0.35)</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-action-background-color</td>
+      <td>color</td>
+      <td>transparent</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-action-background-color-hover</td>
+      <td>color</td>
+      <td>rgba(255, 255, 255, .2)</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-notification-action-background-color-active</td>
+      <td>color</td>
+      <td>rgba(255, 255, 255, .2)</td>
+    </tr>
+  </table> -->
 
 </body>
 </html>
