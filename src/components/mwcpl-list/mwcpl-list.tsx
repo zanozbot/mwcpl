@@ -20,8 +20,4 @@ export class MwcplList implements ComponentInterface {
     );
   }
 
-  componentWillRender() {
-    
-  }
-
 }
