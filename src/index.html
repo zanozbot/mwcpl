@@ -16,6 +16,9 @@
     mwcpl-dialog {
       visibility: hidden;
     }
+    mwcpl-list, mwcpl-tree-view {
+      width: 300px;
+    }
     * {
       font-family: Poppins, sans-serif;
     }
@@ -33,6 +36,9 @@
     }
     #navbar-scrollable {
       height: 200px;
+    }
+    #scrollable-tree-view {
+      max-height: 200px;
     }
     @media only screen and (max-width: 599px) {
       #navbar-spaced {
@@ -646,6 +652,66 @@
       <td>rgba(255, 255, 255, .2)</td>
     </tr>
   </table> -->
+
+  <h2>Tree view</h2>
+
+  <h3>Standard</h3>
+  <mwcpl-tree-view>
+    <mwcpl-tree-view-item label="Level 1 item">
+      <mwcpl-tree-view-item label="Level 2 item">
+        <mwcpl-tree-view-item label="Level 3 item"></mwcpl-tree-view-item>
+        <mwcpl-tree-view-item label="Level 3 item"></mwcpl-tree-view-item>
+      </mwcpl-tree-view-item>
+      <mwcpl-tree-view-item label="Level 2 item"></mwcpl-tree-view-item>
+    </mwcpl-tree-view-item>
+    <mwcpl-tree-view-item label="Level 1 item"></mwcpl-tree-view-item>
+  </mwcpl-tree-view>
+
+  <h3>Scrollable</h3>
+  <mwcpl-tree-view id="scrollable-tree-view">
+    <mwcpl-tree-view-item open label="Level 1 item">
+      <mwcpl-tree-view-item open label="Level 2 item">
+        <mwcpl-tree-view-item open label="Level 3 item"></mwcpl-tree-view-item>
+        <mwcpl-tree-view-item label="Level 3 item"></mwcpl-tree-view-item>
+      </mwcpl-tree-view-item>
+      <mwcpl-tree-view-item label="Level 2 item"></mwcpl-tree-view-item>
+    </mwcpl-tree-view-item>
+    <mwcpl-tree-view-item label="Level 1 item"></mwcpl-tree-view-item>
+  </mwcpl-tree-view>
+
+  <h3>Variables</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default value</th>
+    </tr>
+    <tr>
+      <td>--mwcpl-tree-view-background-color</td>
+      <td>color</td>
+      <td>#ffffff</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-tree-view-border-radius</td>
+      <td>size</td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-tree-view-color</td>
+      <td>color</td>
+      <td>#000000</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-tree-view-item-background-color-hover</td>
+      <td>color</td>
+      <td>#f5f5f5</td>
+    </tr>
+    <tr>
+      <td>--mwcpl-tree-view-border-color</td>
+      <td>color</td>
+      <td>#d3d3d3</td>
+    </tr>
+  </table>
 
 </body>
 </html>
