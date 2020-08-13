@@ -9,7 +9,7 @@
 ul {
   padding: 0;
   border: 1px solid var(--mwcpl-list-border-color, #d3d3d3);
-  border-radius: var(--mwcpl-border-radius, 4px);
+  border-radius: var(--mwcpl-list-border-radius, 4px);
 }
 
 ::slotted(li[role="separator"]:not([group])) {

@@ -9,6 +9,7 @@ li {
   padding: 1rem;
   transition: all 100ms ease;
   background-color: var(--mwcpl-list-item-background-color, #ffffff);
+  border-radius: var(--mwcpl-list-border-radius, 4px);
   color: var(--mwcpl-list-item-color, #000000);
   cursor: pointer;
   .spacer {
