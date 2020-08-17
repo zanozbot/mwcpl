@@ -49,7 +49,7 @@
 </head>
 <body>
 
-  <!-- <h2>Buttons</h2>
+  <h2>Buttons</h2>
 
   <h3>Standard</h3>
   <div>
@@ -162,7 +162,7 @@
     <tr>
       <td>--mwcpl-button-background-color-box-shadow</td>
       <td>color</td>
-      <td>#d9dcf0</td>
+      <td>0 0 0 2px #d9dcf0</td>
     </tr>
     <tr>
       <td>--mwcpl-button-background-color-loading</td>
@@ -231,7 +231,7 @@
     <mwcpl-button slot="primary-action" label="Got it!" closeDialog></mwcpl-button>
   </mwcpl-dialog>
 
-  <h3>With actions</h3>
+  <h3>With Actions</h3>
   <mwcpl-button onclick="document.getElementById('actions-dialog').setAttribute('open', '')" label="Actions"></mwcpl-button>
   <mwcpl-dialog id="actions-dialog" heading="Agreement policy">
     <p>Do you agree with our Terms and Conditions?</p>
@@ -246,7 +246,7 @@
     <mwcpl-button slot="primary-action" label="Close" closeDialog></mwcpl-button>
   </mwcpl-dialog>
 
-  <h3>Dismissable backdrop</h3>
+  <h3>Dismissable Backdrop</h3>
   <mwcpl-button onclick="document.getElementById('dismissable-dialog').setAttribute('open', '')" label="Dismissable"></mwcpl-button>
   <mwcpl-dialog id="dismissable-dialog" heading="Dismissable dialog" dismissable>
     <p>Click on the backdrop to dismiss the dialog.</p>
@@ -592,15 +592,15 @@
   <h2>Notifications</h2>
 
   <h3>Standard</h3>
-  <mwcpl-notification label="Notification"></mwcpl-notification>
+  <mwcpl-notification show label="Notification"></mwcpl-notification>
 
   <h3>With icon</h3>
-  <mwcpl-notification label="Notification">
+  <mwcpl-notification show label="Notification">
     <span slot="icon" class="fas fa-bell"></span>
   </mwcpl-notification>
 
   <h3>With action</h3>
-  <mwcpl-notification label="Notification">
+  <mwcpl-notification show label="Notification">
     <mwcpl-button closeNotification slot="action" label="Action"></mwcpl-button>
   </mwcpl-notification>
 
@@ -649,9 +649,9 @@
     <tr>
       <td>--mwcpl-notification-action-background-color-active</td>
       <td>color</td>
-      <td>rgba(255, 255, 255, .2)</td>
+      <td>rgba(255, 255, 255, .3)</td>
     </tr>
-  </table> -->
+  </table>
 
   <h2>Tree view</h2>
 

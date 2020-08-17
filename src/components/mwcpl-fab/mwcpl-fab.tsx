@@ -8,14 +8,14 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 export class MwcplFab implements ComponentInterface {
 
   /**
-   * The floating action button label
+   * Label for the FAB.
    */
-  @Prop() label: string;
+  @Prop() label: string = '';
 
   /**
-   * Is the floating action button mini
+   * Creates a smaller of FAB.
    */
-  @Prop() mini: string;
+  @Prop() mini: boolean = false;
 
   render() {
     return (

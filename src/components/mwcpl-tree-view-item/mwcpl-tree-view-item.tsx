@@ -9,10 +9,20 @@ export class MwcplTreeViewItem implements ComponentInterface {
 
   @Element() element: HTMLElement;
 
+  /**
+   * Label of the tree view item. 
+   */
   @Prop() label: string;
 
+  /**
+   * Shows children tree view item(s).
+   */
   @Prop({reflect: true}) open: boolean;
 
+  /**
+   * Helper variable which indicates if this tree view item
+   * has any children
+   */
   @State() hasChildren: boolean = false;
 
   componentDidLoad() {

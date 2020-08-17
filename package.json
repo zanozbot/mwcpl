@@ -1,7 +1,15 @@
 {
   "name": "mwcpl",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Masters Web Component Pattern Library",
+  "author": {
+    "name": "Žan Ožbot",
+    "email": "zan.ozbot@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanozbot/mwcpl"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",

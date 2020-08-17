@@ -8,9 +8,9 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 export class MwcplList implements ComponentInterface {
 
   /**
-   * Is the list clickable
+   * Makes the list clickable.
    */
-  @Prop() clickable: boolean;
+  @Prop() clickable: boolean = false;
 
   render() {
     return (

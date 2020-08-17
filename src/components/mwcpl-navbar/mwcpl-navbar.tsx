@@ -8,12 +8,12 @@ import { Component, ComponentInterface, h, Element, Prop } from '@stencil/core';
 export class MwcplNavbar implements ComponentInterface {
 
   /**
-   * Is the navbar fixed
+   * Creates a fixed navigation bar.
    */
   @Prop() fixed: boolean;
 
   /**
-   * Reference to the host element
+   * Reference to the host element.
    */
   @Element() element: HTMLElement;
 

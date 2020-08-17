@@ -7,9 +7,15 @@ import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
 })
 export class MwcplNotification implements ComponentInterface {
 
-  @Prop() label: string;
+  /**
+   * The text of the notification.
+   */
+  @Prop() label: string = '';
 
-  @Prop({reflect: true}) show: boolean = true;
+  /**
+   * Makes the notification visible.
+   */
+  @Prop({reflect: true}) show: boolean = false;
 
   render() {
     return (

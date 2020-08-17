@@ -8,17 +8,17 @@ import { Component, ComponentInterface, h, Prop, Host } from '@stencil/core';
 export class MwcplDialog implements ComponentInterface {
 
   /**
-   * The dialog title
+   * The title of the dialog.
    */
   @Prop() heading: string;
 
   /**
-   * Is the dialog open
+   * Controls the visibility of the dialog.
    */
   @Prop({ reflect: true }) open: boolean;
 
   /**
-   * Is the backdrop dismissable
+   * Dismisses the dialog by clicking on the backdrop.
    */
   @Prop() dismissable: boolean;
 

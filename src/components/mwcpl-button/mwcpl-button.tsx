@@ -8,39 +8,39 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 export class MwcplButton implements ComponentInterface {
 
   /**
-   * The button label
+   * Label for the button.
    */
-  @Prop() label: string;
+  @Prop() label: string = '';
 
   /**
-   * Is the button text uppercase
+   * Makes the button text uppercase.
    */
-  @Prop() uppercase: boolean;
+  @Prop() uppercase: boolean = false
 
   /**
-   * Is the button fullwidth
+   * Creates a fullwidth button.
    */
-  @Prop() fullwidth: boolean;
+  @Prop() fullwidth: boolean = false;
 
   /**
-   * Is the button outlined
+   * Creates an outlined button.
    */
-  @Prop() outlined: boolean;
+  @Prop() outlined: boolean = false;
 
   /**
-   * Is the button disabled
+   * Makes the button non interactive.
    */
-  @Prop() disabled: boolean;
+  @Prop() disabled: boolean = false;
 
   /**
-   * Is the button rounded
+   * Creates a button with rounded corners.
    */
-  @Prop() rounded: boolean;
+  @Prop() rounded: boolean = false;
 
   /**
-   * Is the button loading
+   * Adds a loading indicator.
    */
-  @Prop() loading: boolean;
+  @Prop() loading: boolean = false;
 
   render() {
     return (

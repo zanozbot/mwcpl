@@ -8,14 +8,14 @@ import { Component, ComponentInterface, h, Prop, Host } from '@stencil/core';
 export class MwcplFormField implements ComponentInterface {
 
   /**
-   * The form field label
+   * Label for the form field.
    */
-  @Prop() label: string;
+  @Prop() label: string = '';
 
   /**
-   * Is the form field fullwidth
+   * Creates a fullwidth form field.
    */
-  @Prop() fullwidth: boolean;
+  @Prop() fullwidth: boolean = false;
 
   render() {
     return (

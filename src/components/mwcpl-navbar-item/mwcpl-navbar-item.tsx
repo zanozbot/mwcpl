@@ -8,34 +8,39 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 export class MwcplNavbarItem implements ComponentInterface {
 
   /**
-   * The navigation item label
+   * Selects the text, icon and background. 
    */
-  @Prop() label: string;
+  @Prop() active: boolean = false;
 
   /**
-   * The navigation item href
+   * The label of the navigation item.
    */
-  @Prop() href: string;
+  @Prop() label: string = '';
 
   /**
-   * Is the navigation item acting as a spacer
+   * `href` of the navigation item.
    */
-  @Prop() spacer: boolean;
+  @Prop() href: string = '#';
 
   /**
-   * Is the navigation item open
+   * Pushes the element to the bottom of the navigation bar.
    */
-  @Prop() open: boolean;
+  @Prop() spacer: boolean = false;
 
   /**
-   * Is the navigation item a header
+   * Extends the navigation item.
    */
-  @Prop() header: boolean;
+  @Prop() open: boolean = false;
 
   /**
-   * Is the navigation item header without icon
+   * Makes the font larger and bolder.
    */
-  @Prop() iconless: boolean;
+  @Prop() header: boolean = false;
+
+  /**
+   * Hides the header icon.
+   */
+  @Prop() iconless: boolean = false;
 
   render() {
     return (
