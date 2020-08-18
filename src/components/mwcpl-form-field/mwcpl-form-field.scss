@@ -1,6 +1,7 @@
 :host {
   display: inline-flex;
   flex-direction: column;
+  font-family: Roboto, sans-serif;
 }
 
 :host([fullwidth]) {
@@ -40,6 +41,7 @@ label {
 }
 
 slot[name="input"]::slotted(*) {
+  font-family: Roboto, sans-serif;
   flex: 1 1 auto;
   border: none;
   color: var(--mwcpl-form-field-color, #000000);
