@@ -1,7 +1,13 @@
 {
   "name": "mwcpl",
-  "version": "0.0.1",
-  "description": "Masters Web Component Pattern Library",
+  "version": "0.0.2",
+  "description": "Master's Web Component Pattern Library",
+  "keywords": [
+    "stencil.js",
+    "web components",
+    "pattern library",
+    "master's project"
+  ],
   "author": {
     "name": "Žan Ožbot",
     "email": "zan.ozbot@gmail.com"
@@ -30,7 +36,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
-    "@stencil/core": "^1.12.2",
+    "@stencil/core": "^1.17.3",
     "@stencil/sass": "^1.3.2"
   },
   "license": "MIT"
