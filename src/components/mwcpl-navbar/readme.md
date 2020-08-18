@@ -6,8 +6,6 @@ Navigate to [`mwcpl-navbar-item`](https://github.com/zanozbot/mwcpl/tree/master/
 
 ### Standard
 
-### Standard
-
 ![](images/standard.png)
 
 ```html
@@ -103,6 +101,9 @@ Navigate to [`mwcpl-navbar-item`](https://github.com/zanozbot/mwcpl/tree/master/
 | Property | Attribute | Description                     | Type      | Default |
 | -------- | --------- | ------------------------------- | --------- | ------- |
 | `fixed`  | `fixed`   | Creates a fixed navigation bar. | `boolean` | `false` |
+
+\* Fixed navigation bar occupies `5rem` of width on screens >= 600px. Therefore, a `margin-left` of `5rem` or similar should be added to the body or content. <br>
+\*\* On screens < 600px navigation bar occupies `3rem` of height. Therefore, a `margin-bottom` of `3rem` or similar should be added to the body or content.
 
 ### CSS Custom Properties
 
