@@ -2,7 +2,7 @@
 
 # mwcpl
 
-> Masters Web Components Pattern Library
+> Master's Web Components Pattern Library
 
 A part of a master's thesis titled Development of universal web components using the Web Components standard.
 
@@ -22,13 +22,80 @@ A part of a master's thesis titled Development of universal web components using
 | [`<mwcpl-tree-view>`](https://github.com/zanozbot/mwcpl/tree/master/src/components/mwcpl-tree-view)           | [Issues](https://github.com/zanozbot/mwcpl/issues?q=is%3Aissue+is%3Aopen+label%3A%22Component%3A+Tree+View%22)      |
 | [`<mwcpl-tree-view-item>`](https://github.com/zanozbot/mwcpl/tree/master/src/components/mwcpl-tree-view-item) | [Issues](https://github.com/zanozbot/mwcpl/issues?q=is%3Aissue+is%3Aopen+label%3A%22Component%3A+Tree+View+Item%22) | 
 
+You can experience FOUC before hydration with some components. To fix that set their `visibility` to `hidden`, since this property is overridden upon hydration.<br>
+Example
+
+```css
+mwcpl-dialog {
+    visibility: hidden;
+}
+```
+
 ## Fonts
 
-Masters Web Components Pattern Library defaults to using [Roboto](https://fonts.google.com/specimen/Roboto) font for the text, and the [FontAwesome](https://fontawesome.com/) font for the icons.
+Master's Web Components Pattern Library defaults to using [Roboto](https://fonts.google.com/specimen/Roboto) font for the text, and the [FontAwesome](https://fontawesome.com/) font for the icons.
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 <script src="https://kit.fontawesome.com/**.js" crossorigin="anonymous"></script>
+```
+
+## Quickstart
+
+**1.) Install**
+
+Install the pattern library from NPM
+
+```
+npm install mwcpl
+```
+
+**2.)**
+
+Import the pattern library in you HTML.<br>
+Stencil makes sure to lazy load only the used components on the page from the bundle.<br>
+All elements can be controlled with JavaScript, just like built-in HTML elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Web Components Pattern Library</title>
+    <script src='node_modules/mwcpl/dist/mwcpl.js'></script>
+</head>
+<body>
+    <mwcpl-button id="button" label="Click here"></mwcpl-button>
+
+    <script>
+        const button = document.querySelector("#button");
+        button.addEventListener('click', () => {
+            alert("Clicked");
+        });
+    </script>
+</body>
+</html>
+```
+
+**3.) Serve**
+
+Serve your HTML with e.g.
+
+```
+npm install http-server
+```
+
+and for Windows
+
+```
+.\node_modules\.bin\http-server.cmd .
+```
+
+or for Linux
+
+```
+.\node_modules\.bin\http-server .
 ```
 
 ## Contribute
