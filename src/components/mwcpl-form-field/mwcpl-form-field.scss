@@ -45,6 +45,7 @@ slot[name="input"]::slotted(*) {
   flex: 1 1 auto;
   border: none;
   color: var(--mwcpl-form-field-color, #000000);
+  outline: none;
   background-color: var(--mwcpl-form-field-background-color, #f5f5f5);
   font-size: 1rem;
 }
