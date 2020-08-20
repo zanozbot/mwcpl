@@ -49,7 +49,7 @@ export class MwcplButton implements ComponentInterface {
           <span class="line"></span>
         </span>
         <slot name="leading-icon"></slot>
-        <span>{this.label}</span>
+        <span class="label">{this.label}</span>
         <slot name="trailing-icon"></slot>
       </button>
     );

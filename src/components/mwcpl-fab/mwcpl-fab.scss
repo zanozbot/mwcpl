@@ -1,6 +1,5 @@
 :host {
   display: inline-flex;
-  font-family: Roboto, sans-serif;
 }
 
 button {
@@ -9,6 +8,7 @@ button {
   cursor: pointer;
   height: 56px;
   width: 56px;
+  font-family: Roboto, sans-serif;
   border-radius: 290486px;
   background-color: var(--mwcpl-fab-background-color, #3f51b5);
   color: var(--mwcpl-fab-color, #ffffff);
