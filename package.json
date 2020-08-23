@@ -1,6 +1,6 @@
 {
   "name": "mwcpl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Master's Web Component Pattern Library",
   "keywords": [
     "stencil.js",
@@ -29,6 +29,7 @@
     "loader/"
   ],
   "scripts": {
+    "publish": "stencil build && npm publish",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
